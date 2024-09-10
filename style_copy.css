@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ************************************************* */
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Spreads out the logo and nav links */
+    align-items: center;
+}
+
+/* Navbar when scrolled down */
+.navbar.scrolled {
+    background-color: rgb(43, 41, 41);
+}
+
+/* Navbar logo and links styles */
+.navbar .logo {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar.scrolled .logo {
+    color: white;
+    margin-left: 35px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.navbar nav ul li {
+    margin-left: 25px;
+    margin-right: 55px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgba(96, 93, 93, 0.827); /* Text color on hover */
+    /* background-color: rgb(255, 255, 255); Background color on hover */
+    border-radius: 5px; /* Optional: Rounded corners for the background */
+}
+
+.navbar.scrolled nav ul li a {
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding-top: 30px; /* Padding to ensure content isn't hidden behind the fixed navbar */
+}
+/* ************************************************* */
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 35px;
+} 
+
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.intro-text {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.intro h1 {
+    font-size: 36px;
+    color: #1e6c92;
+    margin-bottom: 25px;
+    margin-left: 35px;
+    font-family: "PT Sans-Bo", sans-serif;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #444;
+    margin-left: 35px;
+}
+
+.intro-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.intro-img img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-right: 35px;
+}
+
+.Topic-text {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1e6c92; /* Set background color to blue */
+}
+
+.Topic-text h2 {
+    color: white; /* Optional: Set text color to white for contrast */
+    text-align: center; /* Center text within the heading */
+}
+
+.projects_1 {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+.projects_2 {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+.project_1-left {
+    display: flex;
+    flex-direction: column; /* Stack heading and image vertically */
+    align-items: center;
+    margin-right: 20px; /* Space between left and right columns */
+}
+.project_2-right {
+    display: flex;
+    flex-direction: column; /* Stack heading and image vertically */
+    align-items: center; /* Center the heading and image */
+    margin-left: 20px; /* Space between the paragraph and image */
+}
+
+
+
+.project_1{
+    /* flex: 1;
+    text-align: center;
+    margin: 0 20px; */
+
+    display: flex; /* Flexbox to arrange image and text side by side */
+    align-items: center; /* Vertically center the items */
+    text-align: left; /* Ensure text is aligned to the left */
+    margin: 0 20px;
+}
+.project_2 {
+    display: flex; /* Flexbox to arrange image and text side by side */
+    align-items: center; /* Vertically center the items */
+    text-align: left; /* Ensure text is aligned to the left */
+    margin: 0 20px;
+}
+
+
+.project_1, .project_2 {
+    display: flex;
+    justify-content: center; /* Center images horizontally within their containers */
+}
+.project_1 img, .project_2 img {
+    width: 100%;
+    max-width: 400px; /* Ensure images do not exceed their container's width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.project_1 {
+    margin-left: 35px; /* Adjust margin if needed */
+}
+
+.project_2 {
+    margin-right: 35px; /* Adjust margin if needed */
+}
+
+
+.project_1 h2, .project_2 h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #1e6c92;
+    text-align: center; /* Center the heading above the image */
+}
+
+
+.project_1 p {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    font-size: 18px;
+    color: #555;
+    flex: 1; /* Allow the paragraph to take up remaining space */
+    margin-right: 35px; /* Space between the image and text */
+
+}
+.project_2 p {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+    font-size: 18px;
+    color: #555;
+    flex: 1; /* Allow the paragraph to take up remaining space */
+    margin-left: 35px; /* Space between the image and text */
+}
+
+
+.project_1 a {
+    color: #1e6c92;
+    text-decoration: underline;
+}
+.project_2 a {
+    color: #1e6c92;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #1e6c92;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}

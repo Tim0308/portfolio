@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ************************************************* */
+/* Navbar styles */
+.navbar {
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Spreads out the logo and nav links */
+    align-items: center;
+}
+
+/* Navbar when scrolled down */
+.navbar.scrolled {
+    background-color: rgb(43, 41, 41);
+}
+
+/* Navbar logo and links styles */
+.navbar .logo {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar.scrolled .logo {
+    color: white;
+    margin-left: 35px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    margin-left: 25px;
+    margin-right: 35px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgba(96, 93, 93, 0.827); /* Text color on hover */
+    /* background-color: rgb(255, 255, 255); Background color on hover */
+    border-radius: 5px; /* Optional: Rounded corners for the background */
+}
+
+.navbar.scrolled nav ul li a {
+    color: white;
+}
+
+body {
+    margin: 0;
+    padding-top: 30px; /* Padding to ensure content isn't hidden behind the fixed navbar */
+}
+/* ************************************************* */
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 35px;
+} 
+
+/* Topic-text styles */
+.Topic-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1e6c92; /* Set background color to blue */
+}
+
+.Topic-text h2 {
+    color: white; /* Text color for contrast */
+    text-align: center;
+}
+
+/* Social media section styles */
+.social-media {
+    margin-top: 60px; /* Increase top margin for more separation */
+    text-align: center; /* Center align social media items */
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 0 20px; /* Adjust spacing as needed */
+}
+
+.social-media img {
+    width: 50px; /* Image size */
+    height: auto;
+    border-radius: 5px; /* Rounded corners */
+    transition: transform 0.2s ease; /* Hover effect */
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
