@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,126 +6,305 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
     line-height: 1.6;
-    color: #333;
+    background-color: #f5f5f5;
 }
 
-header {
-    background-color: white;
-    padding: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* ************************************************* */
-/* Navbar styles */
+/* Navbar Styles */
 .navbar {
-    width: 100%;
-    background-color: white;
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    padding: 20px 0;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
     display: flex;
-    justify-content: space-between; /* Spreads out the logo and nav links */
+    justify-content: space-between;
     align-items: center;
+    padding: 15px 50px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
-/* Navbar when scrolled down */
-.navbar.scrolled {
-    background-color: rgb(43, 41, 41);
-}
-
-/* Navbar logo and links styles */
-.navbar .logo {
-    color: #333;
-    font-size: 24px;
+.navbar .logo a {
+    text-decoration: none;
+    color: #1e6c92;
+    font-size: 28px;
     font-weight: bold;
 }
 
-.navbar.scrolled .logo {
-    color: white;
-    margin-left: 35px;
+.navbar nav {
+    flex: 1;
+    text-align: right;
 }
 
-.navbar nav ul {
+.nav-links {
     list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
 }
 
-.navbar nav ul li {
-    margin-left: 25px;
-    margin-right: 35px;
+.nav-links li {
+    display: inline-block;
+    margin-left: 30px;
 }
 
-.navbar nav ul li a {
+.nav-links li a {
     text-decoration: none;
     color: #333;
     font-size: 18px;
-    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: rgba(96, 93, 93, 0.827); /* Text color on hover */
-    /* background-color: rgb(255, 255, 255); Background color on hover */
-    border-radius: 5px; /* Optional: Rounded corners for the background */
+.nav-links li a:hover {
+    color: #1e6c92;
 }
 
-.navbar.scrolled nav ul li a {
-    color: white;
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-body {
-    margin: 0;
-    padding-top: 30px; /* Padding to ensure content isn't hidden behind the fixed navbar */
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
 }
-/* ************************************************* */
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 35px;
-} 
-
-/* Topic-text styles */
-.Topic-text {
+/* Introduction Section */
+.intro {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    width: 100%;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #1e6c92; /* Set background color to blue */
+    padding: 100px 50px;
+    background-color: #fff;
 }
 
-.Topic-text h2 {
-    color: white; /* Text color for contrast */
+.intro-text {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 50px;
+}
+
+.intro-text h1 {
+    font-size: 48px;
+    color: #1e6c92;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 20px;
+    color: #555;
+}
+
+.intro-img {
+    flex: 1;
+    min-width: 300px;
     text-align: center;
 }
 
-/* Social media section styles */
-.social-media {
-    margin-top: 60px; /* Increase top margin for more separation */
-    text-align: center; /* Center align social media items */
+.intro-img img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 50%;
 }
 
-.social-media a {
-    display: inline-block;
-    margin: 0 20px; /* Adjust spacing as needed */
+/* Projects Section */
+.projects {
+    padding: 50px;
+    background-color: #f0f0f0;
 }
 
-.social-media img {
-    width: 50px; /* Image size */
-    height: auto;
-    border-radius: 5px; /* Rounded corners */
-    transition: transform 0.2s ease; /* Hover effect */
+.projects h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #1e6c92;
+    margin-bottom: 50px;
 }
 
-.social-media img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.project:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-img {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.project-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.project-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 28px;
+    color: #1e6c92;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.project-info .btn {
+    text-decoration: none;
+    background-color: #1e6c92;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-info .btn:hover {
+    background-color: #155d75;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1e6c92;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar nav {
+        display: none;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: fixed;
+        background-color: #fff;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: -100%;
+        transition: 0.5s;
+    }
+    
+    .nav-links li {
+        display: block;
+        margin: 20px 0;
+    }
+    
+    .nav-links li a {
+        font-size: 24px;
+    }
+    
+    .nav-active {
+        left: 0;
+    }
+    
+    .intro {
+        padding: 80px 20px;
+    }
+    
+    .intro-text h1 {
+        font-size: 36px;
+    }
+    
+    .intro-text p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .intro-img img {
+        width: 100%;
+    }
+}
+
+
+/* Navbar Styles When Scrolled */
+.navbar.scrolled {
+    background-color: #1e6c92;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .logo a,
+.navbar.scrolled .nav-links li a {
+    color: #fff;
+}
+
+.navbar.scrolled .hamburger .bar,
+.navbar.scrolled .hamburger .bar::before,
+.navbar.scrolled .hamburger .bar::after {
+    background-color: #fff;
+}
+
+/* Hamburger Animation */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1500;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.hamburger.toggle .bar {
+    background-color: transparent;
+}
+
+.hamburger .bar::before,
+.hamburger .bar::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.hamburger .bar::before {
+    transform: translateY(-8px);
+}
+
+.hamburger .bar::after {
+    transform: translateY(8px);
+}
+
+.hamburger.toggle .bar::before {
+    transform: rotate(-45deg);
+}
+
+.hamburger.toggle .bar::after {
+    transform: rotate(45deg);
 }
